@@ -1,1 +1,1 @@
-/dev-api/*  http://gmall-h5-api.atguigu.cn/dev-api/:splat  200
+/prod-api/*  http://gmall-h5-api.atguigu.cn/:splat  200
