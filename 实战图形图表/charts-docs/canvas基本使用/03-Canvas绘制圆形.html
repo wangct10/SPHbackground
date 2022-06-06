@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03-Canvas绘制圆形</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0
+    }
+
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <Canvas width="600" height="400"></Canvas>
+</body>
+<script>
+  // 获取DOM节点
+  let canvas = document.querySelector('canvas')
+  // 获取画布的笔【上下文】
+  let ctx = canvas.getContext('2d')
+  // 绘制圆形
+  ctx.beginPath()
+  // 绘制圆形的方法：x，y，r，起始弧度，结束的弧度，是否逆时针绘制
+  // 360°=2*PI π=180°  Math.PI作用：得到一个近似π的值
+  ctx.arc(100, 100, 50, 0, 2 * Math.PI, true)
+  // 设置填充颜色
+  ctx.fillStyle = 'red'
+  ctx.fill()
+  // 绘制图形
+  ctx.stroke()
+
+  // 绘制一个圆
+  ctx.beginPath()
+  // ctx.arc(200, 200, 50, 0, 1, false)
+  ctx.arc(200, 200, 50, 0, 4.7, false)
+  //弧度换算 180度＝π弧度 1弧度≈57度
+  ctx.stroke()
+  ctx.moveTo(200, 200)
+  ctx.lineTo(250, 200)
+  ctx.stroke()
+</script>
+
+</html>
